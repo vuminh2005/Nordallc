@@ -1,0 +1,24 @@
+:root {
+    --truongtop: red
+}
+
+:root {
+    --truongdeobt: grey
+}
+
+:root {
+    --truongbthg: green
+}
+
+:root {
+    --truongqte: blue
+}
+
+:root {
+    --truongphen: brown
+}
+
+* {
+    font-size: 16.27px;
+    margin-top: 0.5px;
+}

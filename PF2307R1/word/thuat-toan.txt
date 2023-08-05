@@ -1,0 +1,46 @@
+- Thuật toán: là tập hợp hữu hạn các bước, để giải quyết 1 vấn đề hoặc 1 bài toán 
+Vd: đi chợ mua đồ
+- lấy xe ra khởi nhà => đi đến chợ => mua đồ => đi xe về => cất xe vào nhà
+==> mua đồ: 
+	+ mua thịt 
+	+ mua rau
+	+ mua đồ khô
+=> đưa ra các bước để giải quyết vấn đề => giải thuật
+- Bài toán => k tìm ra cách giải
+	=> phân tích lý do tại sao không giải được:
+		+ thời gian ngắn, bài khó
+		+ chưa biết bắt đầu từ đâu
+
+- Lưu ý: WHAT - HOW - WHY
+
+- Cách giải quyết thuật toán trong lập trình
+	* Bài toán ví dụ: Tính trung bình cộng 2 số tự nhiên bất kỳ
+
+	+ Mã giả (pseudo-code): là phương pháp để giải thuật cho một bài toán. Mã giả sử dụng các từ ngữ thường 	dùng để mô tả các bước giải quyết bài toán
+		+ Ưu điểm: dễ sử dụng, dễ học, không quá quy tắc
+		+ Nhược điểm: không chặt chẽ trong việc đưa ra các bước giải quyết bài toán, dễ gây nhầm lẫn, không 		mô tả được luồng của chương trình
+	VD:
+	Bắt đầu
+		nhập vào a
+		nhập vào b
+		ketqua = (a + b) / 2
+		in ra ketqua
+	Kết thúc	
+
+	=> lưu ý: mã giả thường dùng tiếng anh để mô tả
+	Start
+		input a
+		input b
+		ketqua = (a + b) / 2
+		output ketqua
+	End
+
+	+ Lưu đồ (flowchart): là phương pháp để giải thuật cho một bài toán. Sử dụng các khối hình học để mô tả các 	bước, yêu cầu của bài toán
+		+ Ưu điểm: rõ ràng, chỉ rõ luồng của bài toán, chặt chẽ
+		+ Nhược điểm: cần phải nắm các quy tắc để hiểu được lưu đồ, đôi khi quá chặt chẽ 
+	+ Các khối hình học sử dụng:
+		+ Hình oval (elipse): thể hiện bắt đầu và kết thúc của chương trình
+		+ Hình bình hành: thể hiện input/output của chương trình
+		+ Hình thoi: thể hiện biểu thức điều kiện, cầu trúc rẽ nhánh
+		+ Hình chữ nhật: thể hiện biểu thức tính toán 
+		+ Mũi tên: thể hiện luồng, hướng đi của chương trình 

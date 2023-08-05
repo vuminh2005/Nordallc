@@ -1,0 +1,38 @@
+- IDE: các công cụ hỗ trợ lập trình viên biên soạn mã nguồn
+	- cung cấp các extension để ltv làm việc dễ hơn
+	- dễ dàng thêm thư viện, các phần mềm hỗ trợ khác
+- Học và làm việc với lập trình => tư duy lập trình => biết đang làm gì, muốn làm gì, thực thi nó ntn
+- VSC - Visual Studio Code: free, rất nhẹ, tích hợp dễ dàng các plugin/extension thông qua market của nó
+	- Khó khăn: VSC không cung cấp môi trường (environment) sẵn cho các ngôn ngữ
+		=> tự tìm hiểu và cài các môi trường cần thiết để làm việc được
+- HTML, CSS sử dụng VSC rất phù hợp, được đánh giá là 1 trong các IDE mạnh nhất về việc tìm kiếm trong mã nguồn
+	- Code FE (frontend) 
+- Cài đặt 1 vài plugin đơn giản:
+	+ Live Server (bắt buộc có)
+	+ EasyZoom
+- Giới thiệu về đuôi file: phần mở rộng để định danh rằng file đó là kiểu file nào
+	Vd: file ảnh: .jpg, .png, .svg
+		file video: .mp4
+		file audio: .mp3
+		file text: .doc, .docx, .txt, .csv
+		file excel: .xls,...
+- Lưu ý: trong khóa học, mn cần làm quen vs 3 đuôi như sau:
+	- file html: .html
+	- file css: .css
+	- file javascript: .js
+- Ngôn ngữ thì file của nó phần mở rộng là tên ngôn ngữ
+	- python: .py
+	- java: .java, .class
+	- php: .php
+	- typescript: .ts
+
+- Cách tạo lập 1 trang web cơ bản: xây dựng các tài nguyên cho trang web, dựa trên yêu cầu hoặc ý tưởng , nhằm mục đích phục vụ người dùng. dựa vào các ngôn ngữ lập trình nói chung => thiết kế xây dựng phần mềm
+- Xây dựng các trang web tĩnh => sử dụng js để chuyển thành trang web động
+- Ngôn ngữ HTML: Hyper Text Markup Language - ngôn ngữ đánh dấu siêu văn bản
+	+ HTML không tính là ngôn ngữ lập trình (không xử lý logic nghiệp vụ)
+	+ Giúp xây dựng giao diện cho trang web, nhằm thể hiện logic
+	-> hiểu đơn giản về HTML: là nó giúp chuyển các tài nguyên thành các thẻ html, qua đó thay đổi định dạng và hiển thị tài nguyên dưới 1 định dạng khác
+	- VD: HelloWorld -> hiển thị in đậm, to lên -> ghép thêm thẻ HTML -> kết quả: HelloWorld
+- Tạo trang HTML trong VSC:
+	- Tạo file HTML: new file -> đặt tên: <name> + .html
+	- Trong file thì sử dụng hỗ trợ của VSC để tạo trang
