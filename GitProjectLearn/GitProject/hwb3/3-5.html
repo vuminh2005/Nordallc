@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            display: inline;
+        }
+
+        form {
+            margin: 0 auto;
+            width: 300px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 32px;
+        }
+
+        input {
+            font-size: 32px;
+        }
+
+        #rd {
+            height:25px; 
+            width:25px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="get">
+        <p>Họ và tên:</p> <br>
+        <input type="text" name="name"> <br> <br>
+        <p>Email:</p> <br>
+        <input type="text" name="email"> <br> <br>
+        <p>Số điện thoại:</p> <br>
+        <input type="text" name="phone"> <br> <br>
+        <p>Giới tính</p> <br>
+        <input type="radio" name="gender" id="rd" checked>Nam 
+        <input type="radio" name="gender" id="rd">Nữ <br> <br>
+        <input type="submit" value="Đăng ký" name="submitbt">
+    </form>
+</body>
+</html>
