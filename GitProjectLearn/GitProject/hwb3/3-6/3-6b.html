@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        form {
+            width: 510px;
+            margin: 0 auto;
+            background-color: khaki;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+
+        .info {
+            color: blue;
+        }
+
+        #title {
+            background-color:aquamarine;
+            color: blue;
+            font-size: 20px;
+            text-align: left;
+        }
+
+        #name {
+            width: 200px;
+        }
+
+        #dob {
+            width: 105px;
+        }
+
+        #email {
+            width: 126px;
+        }
+
+        #phone {
+            width: 126px;
+        }
+
+        #address {
+            width: 175px;
+            padding-bottom: 23px;
+        }
+
+        #textaddress {
+            text-align: top;
+            padding-bottom: 23px;
+        }
+    </style>
+ </head>
+<body>
+    <form action="" method="get">
+        <table>
+            <tr>
+                <th height="28px" id="title" colspan="4"><b>ĐĂNG KÝ HỌC VIÊN</b></th>
+            </tr>
+            <tr>
+                <td class="info">Họ và tên</td>
+                <td colspan="2"><input id="name" type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td class="info">Ngày sinh</td>
+                <td colspan="2"><input id="dob" type="text" name="dob"></td>
+            </tr>
+            <tr>
+                <td class="info">Giới tính</td>
+                <td><input type="radio" name="gender" id="male"> Nam <input type="radio" name="gender" id="female"> Nữ</td>
+            </tr>
+            <tr>
+                <td class="info" id="textaddress">Địa chỉ</td>
+                <td><input type="text" id="address" name="address"></td>
+            </tr>
+            <tr>
+                <td class="info">Lớp</td>
+                <td>
+                    <select name="class">
+                        <option value="" disabled selected>-Chọn lớp-</option>
+                        <option value="A1">A1</option>
+                        <option value="D1">D1</option>
+                        <option value="D2">D2</option>
+                        <option value="D3">D3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="info">Email</td>
+                <td colspan="4"><input id="email" type="text" name="email"></td>
+            </tr>
+            <tr>
+                <td class="info">Điện thoại</td>
+                <td colspan="4"><input type="text" id="phone" name="phone"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="submitbt" value="Đăng ký"> <input type="reset" name="resetbt" value="Nhập lại"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
