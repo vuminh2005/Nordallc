@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        inputMoney = prompt("Nhập số tiền bạn muốn gửi tiết kiệm (triệu đồng): ")
+        inputInterest = prompt("Nhập lãi đơn của ngân hàng bạn muốn gửi tiết kiệm (%/năm): ")
+        inputYears = prompt("Nhập số năm mà bạn muốn gửi tiết kiệm (năm): ")
+
+        let money = parseInt(inputMoney)
+        interest = parseFloat(inputInterest)
+        years = parseInt(inputYears)
+        amount = money + money*interest*years/100
+
+        document.write("Sau " + years + " năm số tiền cả gốc lẫn lãi là: " + amount + " triệu đồng")
+    </script>
+</body>
+</html>
