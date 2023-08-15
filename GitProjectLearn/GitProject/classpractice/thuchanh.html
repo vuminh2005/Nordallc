@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="chieudai" placeholder="Nhập chiều dài">
+    <input type="text" id="chieurong" placeholder="Nhập chiều rộng">
+    <button onclick="m1()">Click</button>
+    <h1><a id="dientich"></a></h1>
+    <h2><a id="chuvi"></a></h2>
+</body>
+<script>
+    function m1() {
+        let a = +document.getElementById("chieudai").value 
+        let b = +document.getElementById("chieurong").value 
+
+        S = a*b
+        C = (a + b) * 2
+
+        document.getElementById("dientich").innerHTML = "Diện tích hình chữ nhật là: " + S
+        document.getElementById("chuvi").innerHTML = "Chu vi hình chữ nhật là: " + C
+    }
+</script>
+</html>
