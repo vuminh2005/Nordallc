@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 1000px;
+            text-align: center;
+        }
+
+        button {
+            color: white;
+            background-color: blueviolet;
+            
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="get">
+        <table>
+            <tr>
+                <th>Amount</th>
+                <th>From Currency</th>
+                <th>To Currency</th>
+            </tr>
+            <tr>
+                <td><input type="number" id="amountvalue"></td>
+                <td>
+                    <select name="fromcurrency" id="from">
+                        <option value="blank" disabled selected>Choose a Currency</option>
+                        <option value="VND1" id="VND1">VND</option>
+                        <option value="USD1" id="USD1">USD</option>
+                        <option value="YEN1" id="YEN1">YEN</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="tocurrency" id="to">
+                        <option value="blank" disabled selected>Choose a Currency</option>
+                        <option value="VND2" id="VND2">VND</option>
+                        <option value="USD2" id="USE2">USD</option>
+                        <option value="YEN2" id="YEN2">YEN</option>
+                    </select>
+                </td>
+                <td><button onclick="m1()"><b>Convert</b></button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    function m1() {
+        const amount = document.getElementById("amountvalue").value
+    }
+</script>
+</html>

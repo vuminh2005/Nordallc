@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" id="month" placeholder="Số thứ tự của tháng"> <button onclick="m1()">Tính số ngày</button>
+    <p id="day"></p>
+</body>
+<script>
+    function m1() {
+        const month = +document.getElementById("month").value
+        switch(month) {
+            case 1, 3, 5, 7, 8, 10, 12:
+                document.getElementById("day").innerHTML = "Tháng " + month + " có 31 ngày"
+                break
+            case 2:
+                document.getElementById("day").innerHTML = "Tháng " + month + " có 28 hoặc 29 ngày"
+                break
+            case 4, 6, 9, 11:
+                document.getElementById("day").innerHTML = "Tháng " + month + " có 30 ngày"
+                break
+            default:
+                document.getElementById("day").innerHTML = "Tháng không tồn tại"
+        }
+    }
+</script>
+</html>

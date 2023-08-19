@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="fruit" id="fruitoption"> <button onclick="m1()">Xem giá</button>
+    <p id="price"></p>
+</body>
+<script>
+    var oi = "20000 VNĐ/kg"
+    var duaHau = "20000 VNĐ/kg"
+    var tao = "30000 VNĐ/kg"
+    var xoai = "30000 VNĐ/kg"
+    var cam = "40000 VNĐ/kg"
+    var chomChom = "40000 VNĐ/kg"
+    var mangCut = "50000 VNĐ/kg"
+    function m1() {
+        var fruit = document.getElementById("fruitoption").value
+        switch(fruit) {
+            case "Ổi":
+                document.getElementById("price").innerHTML = oi
+                break
+            case "Dưa Hấu":
+                document.getElementById("price").innerHTML = duaHau
+                break
+            case "Táo":
+                document.getElementById("price").innerHTML = tao
+                break
+            case "Xoài":
+                document.getElementById("price").innerHTML = xoai
+                break
+            case "Cam":
+                document.getElementById("price").innerHTML = cam
+                break
+            case "Chôm Chôm":
+                document.getElementById("price").innerHTML = chomChom
+                break
+            case "Măng Cụt":
+                document.getElementById("price").innerHTML = mangCut
+                break
+            default:
+                document.getElementById("price").innerHTML = "Loại quả bạn muốn xem giá không nằm trong danh sách"
+        }
+    }
+</script>
+</html>
