@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            margin-left: 50px;
+        }
+
+        * {
+            font-size: 30px;
+        }
+
+        select {
+            margin-left: 54px;
+        }
+
+        #result {
+            color: red;
+            font-size: 40px;
+        }
+
+        div {
+            margin-left: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Tính điểm ĐH khối D</h1>
+        <p>Môn toán<input type="number" id="math"></p>
+        <p>Môn văn  <input type="number" id="literature"></p>
+        <p>Môn anh  <input type="number" id="english"></p>
+        <p>Khu vực
+            <select name="khuvuc" id="area">
+                <option value="0.75">KV1</option>
+                <option value="0.5">KV2-NT</option>
+                <option value="0.25">KV2</option>
+                <option value="0">KV3</option>
+            </select>
+        </p>
+        <button onclick="m1()">Tính điểm</button>
+        <p id="result"></p>
+    </div>
+</body>
+<script>
+    function m1 () {
+        let math = +document.getElementById("math").value
+        let lit = +document.getElementById("literature").value
+        let eng = +document.getElementById("english").value
+        let plus = +document.getElementById("area").value
+        let result = (math + lit + eng + plus).toFixed(2)
+        document.getElementById("result").innerHTML = "Tổng điểm ĐH khối D của bạn là: " + result
+    }
+</script>
+</html>

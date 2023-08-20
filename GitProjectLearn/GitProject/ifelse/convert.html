@@ -15,10 +15,16 @@
             background-color: blueviolet;
             
         }
+
+        p {
+            text-align: left;
+            margin-left: 80px;
+            color: blue;
+            font-size: 20px;
+        }
     </style>
 </head>
 <body>
-    <form action="" method="get">
         <table>
             <tr>
                 <th>Amount</th>
@@ -26,31 +32,42 @@
                 <th>To Currency</th>
             </tr>
             <tr>
-                <td><input type="number" id="amountvalue"></td>
+                <td><input type="number" id="amount"></td>
                 <td>
-                    <select name="fromcurrency" id="from">
-                        <option value="blank" disabled selected>Choose a Currency</option>
-                        <option value="VND1" id="VND1">VND</option>
-                        <option value="USD1" id="USD1">USD</option>
-                        <option value="YEN1" id="YEN1">YEN</option>
+                    <select name="fromCurrency" id="from">
+                        <option value="0" disabled selected>Choose a Currency</option>
+                        <option value="23000" id="VND1">VND</option>
+                        <option value="1" id="USD1">USD</option>
+                        <option value="150" id="YEN1">YEN</option>
                     </select>
                 </td>
                 <td>
-                    <select name="tocurrency" id="to">
-                        <option value="blank" disabled selected>Choose a Currency</option>
-                        <option value="VND2" id="VND2">VND</option>
-                        <option value="USD2" id="USE2">USD</option>
-                        <option value="YEN2" id="YEN2">YEN</option>
+                    <select name="toCurrency" id="to">
+                        <option value="0" disabled selected>Choose a Currency</option>
+                        <option value="23000" id="VND2">VND</option>
+                        <option value="1" id="USE2">USD</option>
+                        <option value="150" id="YEN2">YEN</option>
                     </select>
                 </td>
                 <td><button onclick="m1()"><b>Convert</b></button></td>
             </tr>
         </table>
-    </form>
+        <p>Result: <span id="result"></span></p>
 </body>
 <script>
     function m1() {
-        const amount = document.getElementById("amountvalue").value
+        const amount = +document.getElementById("amount").value
+        const from = +document.getElementById("from").value
+        const to = +document.getElementById("to").value
+
+        if (from == 0 || to == 0) {
+            alert("You have to choose the suitable currency")
+        } else if (amount <= 0) {
+            alert("Your entered amount should have been bigger than 0")
+        } else {
+            const result = amount / from * to
+            document.getElementById("result").innerHTML = result
+        }
     }
 </script>
 </html>
