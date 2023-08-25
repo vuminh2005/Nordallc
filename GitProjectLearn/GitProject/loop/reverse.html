@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="m1()">click</button>
+</body>
+<script>
+    function m1() {
+        let origin = +prompt("Nhập 1 số bất kì lớn hơn hoặc bằng 10:")
+        let reverse = 0
+        let modulus = 0
+        if (origin >= 10) {
+            while (origin > 0) {
+                modulus = origin % 10
+                reverse = reverse * 10 + modulus
+                origin = Math.floor(origin / 10)
+            }
+            alert("Số đảo ngược là: " + reverse)
+        } else {
+            alert("Số bạn vừa nhập không hợp lệ")
+        }
+    }
+</script>
+</html>

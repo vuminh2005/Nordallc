@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="draw()">click to draw</button>
+    <div id="shape"></div>
+</body>
+<script>
+    function draw() {
+        let rectangle = "<table>"
+        let line = ""
+        for (let i = 4; i >= 0; i--) {
+            line += "*"
+            rectangle = rectangle + "<tr><td>" + line + "</td></tr>"
+        }
+        rectangle += "</table>"
+        document.getElementById("shape").innerHTML = rectangle
+    }
+</script>
+</html>

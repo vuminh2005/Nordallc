@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="m1()">click</button>
+</body>
+<script>
+    function m1() {
+        let a = +prompt("Nhập giới hạn dưới:")
+        let b = +prompt("Nhập giới hạn trên:")
+        let result = 0
+        for (let count = b - a; count >= 1; count--) {
+            result = result + b + a
+            if (count == 0) {
+                result += a
+                alert("Tổng các số trong đoạn giới hạn là: " + result)
+                break
+            } else if (count == 1) {
+                alert("Tổng các số trong đoạn giới hạn là: " + result)
+                break
+            } else {
+                a++ ;
+                b--
+                continue
+            }
+
+        }
+
+    }
+</script>
+</html>

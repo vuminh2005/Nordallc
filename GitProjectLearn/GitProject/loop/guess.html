@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="guess()">Chơi</button>
+</body>
+<script>
+    function guess() {
+        let limit = +prompt('Nhập giới hạn trên (giới hạn dưới là 0):')
+        let random = parseInt(Math.random() * 100)
+        let remain = 2
+        while (remain >= 0) {
+            let answer = +prompt("Hãy đoán số trong khoảng giới hạn: ")
+            if (answer == random) {
+                alert("Chúc mừng bạn đã đoán đúng!")
+                break
+            } else if (remain >= 1 && answer < limit) {
+                alert("Sai rồi, bạn còn " + remain + " cơ hội nữa") ;
+            } else if (remain == 0) {
+                alert("Bạn đã hết cơ hội đoán")
+            } else if (remain >= 1 && answer > limit )
+                alert("Bạn nhập số quá to, bạn còn " + remain + " cơ hội nữa")
+            remain--
+        }
+
+    }
+</script>
+</html>
