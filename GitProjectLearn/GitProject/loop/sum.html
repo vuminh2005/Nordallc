@@ -13,10 +13,10 @@
         let a = +prompt("Nhập giới hạn dưới:")
         let b = +prompt("Nhập giới hạn trên:")
         let result = 0
-        for (let count = b - a; count >= 1; count--) {
+        for (let count = b - a; count >= 0; count--) {
             result = result + b + a
             if (count == 0) {
-                result += a
+                result -= a
                 alert("Tổng các số trong đoạn giới hạn là: " + result)
                 break
             } else if (count == 1) {
@@ -24,7 +24,8 @@
                 break
             } else {
                 a++ ;
-                b--
+                b-- ;
+                count--
                 continue
             }
 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="m1()">click and see in console tab</button>
+</body>
+<script>
+    function m1() {
+        let count = +prompt("Enter how many prime numbers you want to see: ")
+        let number = 2
+        while (count >= 1) {
+            let soUoc = 0
+            for (let i = 1; i <= number; i++) {
+                if (number % i == 0) {
+                    soUoc++
+                    continue
+                } else {
+                    continue
+                }
+            }
+            if (soUoc == 2) {
+                console.log(number)
+                count--
+            }
+            number++
+        }
+    }
+</script>
+</html>
