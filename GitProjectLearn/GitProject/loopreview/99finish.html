@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="m1()">click</button>
+    <h1 id="data"></h1>
+</body>
+<script>
+    let data = ""
+    let i = 1
+    function m1() {
+        for (; i < 100; ) {
+            data += i + ", "
+            document.getElementById("data").innerHTML = data
+            i++
+            break
+        }
+        if (i == 100) {
+                alert("Đã hoàn thành")
+                data += "100"
+                document.getElementById("data").innerHTML = data
+            }
+    }
+</script>
+</html>

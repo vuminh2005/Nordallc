@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="m4()">click</button>
+</body>
+<script>
+    function m4() {
+        let number = 1
+        let a = 0
+        let b = 1
+        while (number > 0) {
+            a += b
+            b += a
+            if (a % 5 == 0) {
+                alert("Số đầu tiên trong dãy fibonacci chia hết cho 5 là: " + a)
+                break
+            } else if (b % 5 == 0) {
+                alert("Số đầu tiên trong dãy fibonacci chia hết cho 5 là: " + b)
+                break
+            }
+            number++
+        }
+    }
+</script>
+</html>

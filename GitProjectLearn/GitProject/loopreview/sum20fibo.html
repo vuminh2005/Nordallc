@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-size: 20px;
+        }
+
+        table {
+            border: 1px solid red;
+            width: 600px;
+        }
+
+        tr, td {
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="m5()">click</button>
+    <div id="form"></div>
+    <h1 id="sum"></h1>
+</body>
+<script>
+    function m5() {
+        let number = 1
+        let data = "<table><tr>"
+        let a = 0
+        let b = 1
+        let sum = 0
+        while (number <= 10) {
+            sum = a + b
+            data += "<td>" + a + "</td><td>" + b + "</td>"
+            a += b
+            b += a
+            number++
+        }
+        sum = sum + a + b
+        data += "</tr></table>"
+        document.getElementById("form").innerHTML = data
+        document.getElementById("sum").innerHTML = "Tổng 20 số đầu của dãy Fibonacci là: " + sum
+    }
+</script>
+</html>

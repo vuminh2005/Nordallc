@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="m6()">click</button>
+    <h1 id="sum"></h1>
+</body>
+<script>
+    function m6() {
+        let i = 1
+        let sum = 0
+        let count = 30
+        while (count >= 1) {
+            if (i % 7 == 0) {
+                sum += i
+                count--
+            }
+            i++
+        }
+        document.getElementById("sum").innerHTML = "Tổng 30 số đầu tiên trong các số tự nhiên chia hết cho 7 là: " + sum
+    }
+</script>
+</html>

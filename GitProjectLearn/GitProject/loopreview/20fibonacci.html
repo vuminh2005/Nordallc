@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-size: 20px;
+        }
+
+        table {
+            border: 1px solid red;
+            width: 600px;
+        }
+
+        tr, td {
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="m3()">click</button>
+    <div id="form"></div>
+</body>
+<script>
+    function m3() {
+        let number = 1
+        let data = "<table><tr>"
+        let a = 0
+        let b = 1
+        while (number <= 10) {
+            data += "<td>" + a + "</td><td>" + b + "</td>"
+            a += b
+            b += a
+            number++
+        }
+        data += "</tr></table>"
+        document.getElementById("form").innerHTML = data
+    }
+</script>
+</html>

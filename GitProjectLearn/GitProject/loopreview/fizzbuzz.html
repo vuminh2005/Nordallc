@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="m7()">click</button>
+    <h1 id="data"></h1>
+</body>
+<script>
+    let data = ""
+    let i = 1
+    function m7() {
+        for (; i < 100; ) {
+            if (i % 5 == 0 && i % 3 == 0) {
+                data += "FizzBuzz, "
+                document.getElementById("data").innerHTML = data
+                i++
+            } else if (i % 5 == 0) {
+                data += "Buzz, "
+                document.getElementById("data").innerHTML = data
+                i++
+            } else if (i % 3 == 0) {
+                data += "Fizz, "
+                document.getElementById("data").innerHTML = data
+                i++
+            } else {
+                data += i + ", "
+                document.getElementById("data").innerHTML = data
+                i++
+            }
+        }
+        if (i == 100) {
+                data += "100"
+                document.getElementById("data").innerHTML = data
+        }
+    }
+</script>
+</html>
