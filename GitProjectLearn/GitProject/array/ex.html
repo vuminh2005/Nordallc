@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="myColor()">click and see in console tab 1</button>
+    <button onclick="dash()">click and see in console tab 2</button>
+    <button onclick="cap()">click and see in console tab 3</button>
+</body>
+<script>
+    function myColor() {
+        let myColor = ["Red", "Green", "White", "Black"]
+        console.log(myColor)
+        console.log(myColor.toString())
+    }
+
+    function dash() {
+        const number = +prompt("Enter a number: ")
+        const string = number.toString()
+        const result = [string[0]]
+        console.log(number)
+        console.log(string)
+        console.log(result)
+        for (let x = 1; x < string.length; x++) {
+            if (string[x-1] % 2 == 0 && string[x] % 2 == 0) {
+                result.push("-", string[x])
+            } else {
+                result.push(string[x])
+            }
+        }
+        console.log(result.toString())
+    }
+
+    function cap() {
+        let string = prompt("Enter something:")
+        let upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        let lower = "abcdefghijklmnopqrstuvwxyz"
+        let result = []
+        for (x = 0; x < string.length; x++) {
+            if (upper.indexOf(string[x]) !== -1) {
+                result.push(string[x].toLowerCase())
+            } else if (lower.indexOf(string[x]) !== -1) {
+                result.push(string[x].toUpperCase())
+            } else {
+                result.push(string[x])
+            }
+        }
+        console.log(result.join(""))
+    }
+</script>
+</html>

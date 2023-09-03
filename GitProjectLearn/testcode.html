@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    let iMax = 20;
+    let jMax = 10;
+    let f = new Array();
+
+    for (i = 0; i < iMax; i++) {
+        console.log(f[i])
+        f[i] = new Array();
+        console.log(f[i])
+        for (j = 0; j < jMax; j++) {
+            console.log(f[j])
+            console.log(f[i][j])
+            f[i][j] = 0;
+            console.log(f[j])
+            console.log(f[i][j])
+        }
+        console.log(f[i])
+        console.log(f[j])
+        console.log(f[i][j])
+    }
+    console.log(f[i])
+    console.log(f[j])
+    console.log(f[i][j])
+</script>
+</html>

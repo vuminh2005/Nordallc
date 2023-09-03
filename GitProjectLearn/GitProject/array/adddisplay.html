@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="width: 285px;">
+        <input type="text" id="value">
+        <button onclick="add()">Add</button>
+        <button onclick="disp()">Display</button>
+        <hr>
+    </div>
+    <div id="display"></div>
+</body>
+<script>
+    let arr = []
+    let i = 0
+    let count = 0
+    let result = ""
+
+    function add() {
+        let value = document.getElementById("value").value
+        arr.push(value)
+        count++
+        document.getElementById("value").value = ""
+        console.log(arr)
+    }
+
+    function disp() {
+        while (i < count) {
+            result += "Element " + i + " = " + arr[i] + "<br>"
+            i++
+        }
+        document.getElementById("display").innerHTML = result
+    }
+</script>
+</html>
