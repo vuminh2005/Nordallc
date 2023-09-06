@@ -36,19 +36,29 @@
 
     function cap() {
         let string = prompt("Enter something:")
-        let upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        let lower = "abcdefghijklmnopqrstuvwxyz"
-        let result = []
-        for (x = 0; x < string.length; x++) {
-            if (upper.indexOf(string[x]) !== -1) {
-                result.push(string[x].toLowerCase())
-            } else if (lower.indexOf(string[x]) !== -1) {
-                result.push(string[x].toUpperCase())
+        // let upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        // let lower = "abcdefghijklmnopqrstuvwxyz"
+        // let result = []
+        // for (x = 0; x < string.length; x++) {
+        //     if (upper.indexOf(string[x]) !== -1) {
+        //         result.push(string[x].toLowerCase())
+        //     } else if (lower.indexOf(string[x]) !== -1) {
+        //         result.push(string[x].toUpperCase())
+        //     } else {
+        //         result.push(string[x])
+        //     }
+        // }
+        // console.log(result.join(""))
+        let result = ""
+        for (i = 0; i < string.length; i++) {
+            if (string[i] === string[i].toUpperCase()) {
+                result += string[i].toLowerCase()
             } else {
-                result.push(string[x])
+                result += string[i].toUpperCase()
             }
         }
-        console.log(result.join(""))
+        console.log(string)
+        console.log(result)
     }
 </script>
 </html>

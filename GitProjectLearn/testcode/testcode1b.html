@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <h2>Caro Game Simple</h2>
+    <p id="carogame"></p>
+    <input type="button" value="Draw Board" onclick="drawBoard()">
+    <input type="button" value="Change X" onclick="changeX()">
+    <input type="button" value="Change O" onclick="changeO()">
+</body>
+<script>
+    function drawBoard() {
+        var line = +prompt("Enter the number of lines you want to draw: ")
+        let board = new Array(line);
+        let data = "";
+        for (let i = 0; i < line; i++) {
+            board[i] = new Array(line)
+            for (let j = 0; j < line; j++) {
+                board[i][j] = "."
+            }
+        }
+        for (let i = 0; i < line; i++) {
+            data += "<br/>";
+            for (let j = 0; j < line; j++) {
+                data = data + board[i][j] + "&nbsp;&nbsp;";
+            }
+        }
+        document.getElementById("carogame").innerHTML = data;
+    }
+
+    function changeX() {
+        let positionX = prompt("X: ");
+        let positionY = prompt("Y: ");
+        data = "";
+        board[positionX][positionY] = "x";
+        for (let i = 0; i < line; i++) {
+            data += "<br/>";
+            for (let j = 0; j < line; j++) {
+                data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+        }
+        document.getElementById("carogame").innerHTML = data;
+    }
+
+    function changeO() {
+        let positionX = prompt("X: ");
+        let positionY = prompt("Y: ");
+        data = "";
+        board[positionX][positionY] = "o";
+        for (let i = 0; i < line; i++) {
+            data += "<br/>";
+            for (let j = 0; j < line; j++) {
+                data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+        }
+        document.getElementById("carogame").innerHTML = data;
+    }
+    </script>
+</html>
