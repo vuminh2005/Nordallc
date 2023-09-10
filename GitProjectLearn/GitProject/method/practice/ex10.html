@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let str = prompt("Enter SOMEthing:")
+    let check = prompt("Enter ONE thing:")
+    let arr = str.split("")
+
+    function search(a) {
+        let count = 0
+        for (let i = 0; i < arr.length; i++) {
+            if (a == arr[i]) {
+                count++
+            }
+        }
+        if (count > 0) {
+            alert(count)
+        } else {
+            alert(-1)
+        }
+    }
+
+    search(check)
+</script>
+</html>

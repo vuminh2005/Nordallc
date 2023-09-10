@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let n1 = +prompt("Enter number 1: ")
+    let n2 = +prompt("Enter number 2: ")
+    let n3 = +prompt("Enter number 3: ")
+    let arr = [n1,n2,n3]
+
+    function compare(a) {
+        let min = arr[0]
+        for (let i = 0; i < 3; i++) {
+            if (min > arr[i]) {
+                min = arr[i]
+            }
+        }
+        alert("The lowest number is: " + min)
+    }
+
+    compare(n1)
+</script>
+</html>

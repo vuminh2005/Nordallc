@@ -9,11 +9,12 @@
     <button onclick="reverse()">click and see in console tab</button>
 </body>
 <script>
-    let arr = [1,2,3,4,5,6,7,8,9]
     function reverse() {
+        let arr = [1,2,3,4,5,6,7,8,9]
+        let arr1 = arr.slice(0,9)
+        console.log(arr1)
         let first = 0
         let i = 0
-        console.log(arr)
         while (i < (arr.length / 2)) {
             let last = arr.length - 1 - i
             let temp = arr[first]

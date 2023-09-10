@@ -1,0 +1,21 @@
+Bài 8- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử. 
+Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let str = prompt("Nhập 1 dãy số bất kì để sắp xếp theo thứ tự giảm dần:")
+    let arr = str.split("")
+    arr.sort((a,b) => {return b - a})
+    alert("Dãy số ban đầu: " + str)
+    alert("Dãy số đã sắp xếp: " + arr)
+</script>
+</html>

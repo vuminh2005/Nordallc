@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number = +prompt("Nhập 1 số nguyên dương để tính giai thừa: ")
+
+        function giaiThua(a) {
+            if (a <= 0) {
+                alert("Số bạn vừa nhập không hợp lệ")
+                return
+            }
+            let result = 1
+            for (let i = 0; i < a; i++) {
+                result *= (a - i)
+            }
+            alert("Giai thừa của số bạn vừa nhập là: " + result)
+        }
+
+        giaiThua(number)
+    </script>
+</body>
+</html>

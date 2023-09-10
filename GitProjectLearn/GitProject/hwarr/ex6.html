@@ -1,0 +1,37 @@
+<pre>Bài 6- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, 
+nhập/tạo phần tử số nguyên V. Chương trình tìm xem V có nằm trong mảng số nguyên không?
+Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra 
+"V is not in the array".</pre>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="check()">click</button>
+</body>
+<script>
+    let arr = prompt("Nhập số bất kì để tạo thành 1 mảng gồm các phần tử là các chữ số trong số đó: ")
+    function check() {
+        let count = 0
+        let number = prompt("Nhập 1 số có tối đa 3 chữ số để tìm xem số đó có trong mảng vừa tạo không: ")
+        for (i = 0; i < arr.length; i++) {
+            if (number == arr[i] || number == (arr[i] + arr[i+1]) || number == (arr[i] + arr[i+1] + arr[i+2])) {
+                alert("Số bạn vừa nhập có nằm trong mảng")
+                count++
+            }
+        }
+        if (count == 0) {
+            alert("Số bạn vừa nhập không nằm trong mảng")
+        }
+    }
+</script>
+</html>

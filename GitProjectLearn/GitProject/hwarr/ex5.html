@@ -1,0 +1,25 @@
+Bài 5- Viết chương trình đếm số nguyên âm trong một chuỗi
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="count()">click</button>
+</body>
+<script>
+    function count() {
+        let str = prompt("Nhập 1 chuỗi bất kì để đếm số nguyên âm: ")
+        let count = 0
+        for (i = 0; i <str.length; i++) {
+            if (str[i] === "-" && !isNaN(str[i+1])) {
+                count++
+            }
+        }
+        alert("Chuỗi có " + count + " số nguyên âm")
+    }
+</script>
+</html>
