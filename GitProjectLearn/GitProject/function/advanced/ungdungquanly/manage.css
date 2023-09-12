@@ -1,0 +1,70 @@
+        * {
+            font-size: 20px;
+        }
+
+        #form {
+            margin: auto;
+            width: 50%;
+            border: 3px solid green;
+            padding: 10px;
+        }
+
+        h1 {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .add, .update {
+            color: white;
+            background-color: green;
+        }
+
+        table {
+            border: 1px solid;
+            width: 99%;
+            margin: auto;
+            margin-bottom: 12px;
+        }
+
+        tr, td {
+            border: 1px solid
+        }
+
+        .heading {
+            border: 0px;
+            font-weight: bold;
+            
+        }
+
+        #quantity {
+            color: red;
+            text-align: right;
+        }
+
+        .edit {
+            color: white;
+            background-color: blue;
+        }
+
+        .delete {
+            color: white;
+            background-color: red;
+        }
+
+        .name {
+            width: 90%;
+            padding-left: 10px;
+        }
+
+        .number {
+            width: 5%;
+            text-align: center;
+        }
+
+        #editvalue {
+            margin-right: 1px;
+        }
