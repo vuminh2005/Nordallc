@@ -1,7 +1,7 @@
     let arr = []
     let data = ""
     let count = 0
-    let index = null
+    let index = -1
 
     function show() {
         let data = "<table><tr class='heading'><td class='heading' colspan='2'>Product Name</td><td id='quantity' class='heading' colspan='2'>" + (count) + " Product(s)</td></tr>"
@@ -37,10 +37,11 @@
         } else if (index == null) {
             alert("Please choose a product")
         } else {
-            arr.splice(index,1,change)
+            arr[index] = change
         }
         show()
         document.getElementById("editvalue").value = ""
+        index = -1
     }
 
     function del(a) {

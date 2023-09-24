@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></div>
+    <button onclick="drawCircle(600, 350)">Draw</button>
+    <button onclick="drawMultiple()">Draw Multiple</button>
+    <button onclick="displayRandomColor()">Random Color</button>
+    <button onclick="changeColor()">Change Color</button>
+    <button onclick="reset()">Reset</button>
+    <button onclick="moveUp()">Up</button>
+    <button onclick="moveDown()">Down</button>
+    <button onclick="moveLeft()">Left</button>
+    <button onclick="moveRight()">Right</button>
+    <button onclick="moveConstantly()">Move Constantly</button>
+    <button onclick="stop()">Stop</button>
+</body>
+<script>
+    var ctx = document.getElementById("myCanvas").getContext("2d")
+    var check = false
+    var horizontal = 600
+    var vertical = 350
+    var color = "black"
+    var speed = 1
+    var inter
+
+    function reset() {
+        ctx.clearRect(0, 0, 1368, 768)
+        check = false
+    }
+
+    function circle(x, y, radius) {
+        this.x = x
+        this.y = y
+        this.radius = radius
+    }
+
+    function getRandomColor() {
+        let red = Math.floor(Math.random() * 255)
+        let green = Math.floor(Math.random() * 255)
+        let blue = Math.floor(Math.random() * 255)
+            return "rgb(" + red + "," + green + "," + blue + ")"
+    }
+
+    function drawCircle(a, b) {
+        let cir = new circle(a, b, 50)
+        ctx.beginPath()
+        ctx.arc(cir.x, cir.y, cir.radius, 0, Math.PI * 2)
+        ctx.fill()
+        check = true
+    }
+
+    function displayRandomColor() {
+        color = getRandomColor()
+        draw()
+    }
+
+    function changeColor() {
+        color = prompt("Please enter the color you want to change to:")
+        draw()
+    }
+
+    function drawMultiple() {
+        let number = +prompt("How many circle you want to draw:")
+        for (let i = 0; i < number; i++) {
+            let a = Math.floor(Math.random() * 1300)
+            let b = Math.floor(Math.random() * 700)
+            ctx.fillStyle = getRandomColor()
+            drawCircle(a, b)
+        }
+    }
+
+    function draw() {
+        if (check == false) {
+            alert("Please draw a circle first!")
+        } else if (check == true) {
+            reset()
+            ctx.fillStyle = color
+            drawCircle(horizontal, vertical)
+        }
+    }
+
+    function moveUp() {
+        vertical -= 50
+        draw()
+    }
+
+    function moveDown() {
+        vertical += 50
+        draw()
+    }
+
+    function moveLeft() {
+        horizontal -= 50
+        draw()
+    }
+
+    function moveRight() {
+        horizontal += 50
+        draw()
+    }
+
+    function run() {
+        if (check == false) {
+            alert("Please draw a circle first!")
+        } else if (check == true) {
+            if (vertical > 700 || vertical < 50) {
+                speed = -speed
+            }
+            vertical += speed
+            draw()
+        }
+    }
+
+    function moveConstantly() {
+        inter = setInterval(run, 1)
+    }
+
+    function stop() {
+        clearInterval(inter)
+    }
+</script>
+</html>

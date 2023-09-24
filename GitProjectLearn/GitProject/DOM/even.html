@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nhập số</h1>
+    <input type="number" name="even" id="even"> <button onclick="check()">Kiểm tra</button>
+    <p id="result"></p>
+</body>
+<script>
+    function check() {
+        let num = document.getElementById("even").value
+        if (num % 2 == 0) {
+            document.getElementById("result").innerHTML = num + " là số chẵn"
+        } else {
+            document.getElementById("result").innerHTML = num + " không là số chẵn"
+        }
+    }
+</script>
+</html>

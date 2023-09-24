@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            float: right;
+        }
+
+        #tank {
+            width: 20px;
+            height: 20px;
+        }
+
+        #photo {
+            width: 600px;
+            height: 600px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button onclick="goLeft()">Go Left</button>
+        <button onclick="goRight()">Go Right</button> 
+        <button onclick="goDown()">Go Down</button>
+        <button onclick="goUp()">Go Up</button>
+    </div>
+    <div id="photo">
+        <img id="tank"
+            style= "position: relative; top: 0px; left: 0px;"
+            src="https://rukminim2.flixcart.com/image/850/1000/ksgehzk0/poster/i/w/a/medium-genshin-impact-loli-anime-girls-klee-genshin-impact-hd-original-imag6yu5y7kakhc8.jpeg?q=90">
+    </div>
+    </body>
+
+<script>
+    function goUp() {
+        let up = parseInt(document.getElementById("tank").style.top)
+        console.log(up)
+        document.getElementById("tank").style.top = up  - 20 + "px"
+    }
+
+    function goDown() {
+        let down = parseInt(document.getElementById("tank").style.top)
+        console.log(down)
+        document.getElementById("tank").style.top = down  + 20 + "px"
+    }
+
+    function goLeft() {
+        let left = parseInt(document.getElementById("tank").style.left)
+        console.log(left)
+        document.getElementById("tank").style.left = left  - 20 + "px"
+    }
+
+    function goRight() {
+        let right = parseInt(document.getElementById("tank").style.left)
+        console.log(right)
+        document.getElementById("tank").style.left = right  + 20 + "px"
+    }
+</script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class Animal {
+        name
+        age
+        gender
+        color
+        sound
+
+        constructor(name, age, gender, color, sound) {
+            this.name = name
+            this.age = age
+            this.gender = gender
+            this.color = color
+            this.sound = sound
+        }
+
+        move() {
+            console.log(this.name + " đang kiếm ăn")
+        }
+
+        noise() {
+            console.log(this.name + " kêu " + this.sound)
+        }
+    }
+
+    let animal1 = new Animal("Chó", 1, "giống đực", "đen", "gâu gâu")
+    animal1.move()
+    animal1.noise()
+
+    let animal2 = new Animal("Mèo", 2, "giống cái", "trắng", "meo meo")
+    animal2.move()
+    animal2.noise()
+</script>
+</html>
