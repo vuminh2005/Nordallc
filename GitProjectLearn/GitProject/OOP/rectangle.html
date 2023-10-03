@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="1000px" height="700px"></canvas>
+    <h1 id="result"></h1>
+    <button onclick="    
+    rectangle.changeWidth()    
+    rectangle.changeHeight()
+    "
+    >Change Width and Height
+    </button>
+    <button onclick="rectangle.display()">Display</button>
+    <button onclick="show()">Caculate</button>
+</body>
+<script>
+    let ctx = document.getElementById("canvas").getContext("2d")
+
+    function show() {
+            document.getElementById("result").innerHTML = "Area: " + rectangle.getArea() + "<br>Perimeter: " + rectangle.getPerimeter()
+    }
+
+    class Rectangle {
+        width
+        height
+        color
+
+        constructor(width, height, color) {
+            this.width = width
+            this.height = height
+            this.color = color
+        }
+
+        getArea() {
+            let area = this.width * this.height
+            return area
+        }
+
+        getPerimeter() {
+            let perimeter = (this.width + this.height) * 2
+            return perimeter
+        }
+
+        display() {
+            ctx.fillStyle = this.color
+            ctx.fillRect(0, 0, this.width, this.height)
+        }
+
+        changeWidth() {
+            let newWidth = +prompt("Enter new width:")
+            this.width = newWidth
+        }
+
+        changeHeight() {
+            let newHeight = +prompt("Enter new height:")
+            this.height = newHeight
+        }
+    }
+
+    let rectangle = new Rectangle(600, 300, "red")
+</script>
+</html>

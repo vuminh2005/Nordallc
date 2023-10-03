@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    console
+</body>
+<script>
+    class Temperature {
+        degreeC
+
+        constructor(degreeC) {
+            this.degreeC = degreeC
+        }
+
+        convertToF() {
+            return this.degreeC * 9 / 5 + 32
+        }
+
+        convertToK() {
+            return this.degreeC + 273.15
+        }
+
+        changeC(newC) {
+            this.degreeC = newC
+        }
+    }
+
+    let degree = new Temperature(25)
+    console.log(degree.convertToF())
+    console.log(degree.convertToK())
+</script>
+</html>

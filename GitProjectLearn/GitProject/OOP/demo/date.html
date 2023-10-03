@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    console
+</body>
+<script>
+    class MyDate {
+        day
+        month
+        year
+
+        constructor(day, month, year) {
+            this.day = day
+            this.month = month
+            this.year = year
+        }
+
+        getDay() {
+            return this.day
+        }
+
+        getMonth() {
+            return this.month
+        }
+
+        getYear() {
+            return this.year
+        }
+
+        setDay(newDay) {
+            this.day = newDay
+        }
+
+        setMonth(newMonth) {
+            this.month = newMonth
+        }
+
+        setYear(newYear) {
+            this.year = newYear
+        }
+
+        toString() {
+            return this.day + "/" + this.month + "/" + this.year
+        }
+    }
+</script>
+</html>

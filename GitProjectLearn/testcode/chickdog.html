@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="main()">click</button>
+</body>
+<script>
+function main() {
+    let x = +prompt("Quantity of animals: ");
+    let y = +prompt("Number of legs: ");
+    let check = 0;
+    let dog = 1;
+    let chicken = 1;
+    let sum = 0;
+    let temp = 1;
+    let amount = 0;
+        
+    for (let count1 = 1; count1 <= x; count1++) {
+        let chicken = 1;
+        for (let count2 = 1; count2 <= x; count2++) {
+            sum = chicken * 2 + dog * 4;
+            amount = chicken + dog;
+            if (sum == y && amount == x) {
+                check = 1;
+                temp = chicken;
+                break;
+            } else {
+                chicken++;
+            }
+        }
+        if (check == 1) {
+            break;
+        } else {
+            dog++;
+        }
+    }
+    if (check == 0) {
+        console.log("invalid")
+    } else if (check == 1) {
+        console.log("chicken = " + temp + ", dog = " + dog)
+    }
+}
+</script>
+</html>

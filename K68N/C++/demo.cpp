@@ -1,21 +1,19 @@
 #include <iostream>
-#include <string>
-
 using namespace std;
 
 int main() {
-    string firstName;
-    string lastName;
-    string age;
+    string s, t;
+    cin >> s >> t;
+    int count = 0;
+    int length = s.length();
 
-    cout << "Please insert your first name, last name and age: ";
+    for (int i = 0; i < length; i++) {
+        if (s[i] == t[i]) {
+            count++;
+        }
+    }
 
-    cin >> firstName >> lastName >> age;
-
-    string fullName = firstName + " " + lastName + " " + age;
-
-    cout << fullName;
+    cout << count;
 
     return 0;
 }
-

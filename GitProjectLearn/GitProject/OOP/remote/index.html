@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, tr, th, td {
+            border: 1px solid;
+            width: 500px;
+            background-color:lightsalmon
+        }
+
+        th {
+            text-align: center;
+        }
+
+        td {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th><b>Remote</b></th>
+            <th><b>Tivi</b></th>
+        </tr>
+        <tr>
+            <td>- code: string</td>
+            <td>- currentChannel: int <br>
+                - currentVolume: int <br>
+                - status: boolean
+            </td>
+        </tr>
+        <tr>
+            <td>+ changeChannel(Tivi): void <br>
+                + adjustVolume(Tivi): void <br>
+                + switchButton(): boolean
+            </td>
+            <td>+ changeChannel(): void <br>
+                + adjustVolume(): void <br>
+                + switchButton(): boolean
+            </td>
+        </tr>
+    </table>
+</body>
+<script src="remote.js"></script>
+<script src="tivi.js"></script>
+<script src="index.js"></script>
+</html>

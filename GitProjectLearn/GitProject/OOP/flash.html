@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="game"></div>
+</body>
+<script>
+    class Image {
+        src
+        size
+        top
+        left
+
+        constructor(src, size, top, left) {
+            this.src = src
+            this.size = size
+            this.top = top
+            this.left = left
+        }
+
+        getFlash() {
+            return "<img " +
+            " src='" + this.src + "'" +
+            " width='" + this.size + "'" +
+            " height='" + this.size + "'" +
+            " style='top: " + this.top + "px; left: " + this.left + "px; position: absolute'>"
+        }
+
+        moveRight() {
+        this.left += 10
+        }
+        
+        moveLeft() {
+            this.left -= 10
+        }
+
+        moveBottom() {
+            this.top += 10
+        }
+        
+        moveTop() {
+            this.top -= 10
+        }
+    }
+
+    let flash = new Image("https://animatedtimes.com/wp-content/uploads/2022/04/Grant-Gustin-Running-Stance-Makes-Him-Best-Flash.jpg", 100, 20, 20)
+
+    function run() {
+        if(flash.left < window.innerWidth - flash.size - 20 && flash.top == 20){
+            flash.src = "https://animatedtimes.com/wp-content/uploads/2022/04/Grant-Gustin-Running-Stance-Makes-Him-Best-Flash.jpg"
+            flash.moveRight()
+        } else if (flash.top < window.innerHeight - flash.size - 20 && flash.left > 30) {
+            flash.src = "https://www.defining.co/wp-content/uploads/2022/09/image_1965f411-48aa-4b17-8dc9-9912333f19fe.jpg"
+            flash.moveBottom()
+        } else if (flash.left > 30) {
+            flash.src = "https://www.giantfreakinrobot.com/wp-content/uploads/2019/10/grant-gustin-flash.jpg"
+            flash.moveLeft()
+        } else if (flash.top > 20) {
+            flash.src = "https://scontent.fhan20-1.fna.fbcdn.net/v/t1.15752-9/381778285_984933836124355_3352870892388130536_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_ohc=yCt-v0xAL0kAX_4tE3l&_nc_ht=scontent.fhan20-1.fna&oh=03_AdT1eKDmzG_a0Vct-NQk-zdYPhf-IUm1md7plerA_y2xCw&oe=653BB919"
+            flash.moveTop()
+        }
+
+        document.getElementById('game').innerHTML = flash.getFlash();
+        setTimeout(run, 1)
+    }
+
+    run();
+</script>
+</html>

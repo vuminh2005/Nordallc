@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    console
+</body>
+<script src="electriclamp.js"></script>
+<script src="button.js"></script>
+<script>
+    let lamp = new ElectricLamp(false)
+    let button = new SwitchButton(false)
+    button.connectToLamp(lamp)
+
+    for (let i = 1; i <= 10; i++) {
+        if (lamp.status === false) {
+            button.switchOn()
+        } else {
+            button.switchOff()
+        }
+        console.log("Status: " + lamp.status + " - Bật/Tắt lần: " + i)
+    }
+</script>
+</html>
