@@ -49,7 +49,7 @@ function previousPage() {
 
 // Message
 // Notification
-// Transfer
+// Transaction
 // Login
 // Shopping cart
 // Page number

@@ -1,3 +1,4 @@
+/* background web */
 * {
     background-color: aliceblue;
 }
@@ -11,6 +12,7 @@ a {
     background-color: white;
 }
 
+/* viền table */
 #productAll {
     margin: auto;
     width: 1000px;
@@ -51,6 +53,7 @@ a {
     background-color: white;
 }
 
+/* header */
 #topBar {
     margin: -8px;
     padding: 30px;
@@ -66,12 +69,17 @@ a {
     background-color: red;
 }
 
+.navigate {
+    background-color: red;
+}
+
 .header {
     color: white;
     text-decoration: none;
     background-color: red;
 }
 
+/* display product */
 .productTable {
     width: 100%;
     text-align: center;
@@ -88,10 +96,19 @@ a {
     background-color: white;
 }
 
-.navigate {
-    background-color: red;
+.product {
+    background-color: white;
+    width: 25%;
+    padding-top: 20px;
+    font-size: 20px;
 }
 
+.changePage {
+    border: 1px solid; 
+    padding: 5px
+}
+
+/* title */
 #hot {
     background-color: white;
     padding-top: 20px;
@@ -100,44 +117,6 @@ a {
 #flash {
     background-color: white;
     padding-top: 20px;
-}
-
-span {
-    background-color: white;
-}
-
-.product {
-    background-color: white;
-    width: 25%;
-    padding-top: 20px;
-    font-size: 20px;
-}
-
-#contact {
-    margin: 35px;
-    margin-bottom: 0;
-}
-
-.icon {
-    width: 70px;
-    height: 50px;
-    background-color: aliceblue;
-}
-
-.note {
-    color: red;
-}
-
-img {
-    background-color: white;
-}
-
-#fb {
-    width: 270px;
-    height: 150px;
-    margin-left: 40px;
-    margin-top: -7px;
-    background-color: aliceblue
 }
 
 #clothes {
@@ -157,7 +136,35 @@ img {
     padding-top: 20px;
 }
 
-.changePage {
-    border: 1px solid; 
-    padding: 5px
+/* footer */
+#contact {
+    margin: 35px;
+    margin-bottom: 0;
+}
+
+.note {
+    color: red;
+}
+
+.icon {
+    width: 70px;
+    height: 50px;
+    background-color: aliceblue;
+}
+
+#fb {
+    width: 270px;
+    height: 150px;
+    margin-left: 40px;
+    margin-top: -7px;
+    background-color: aliceblue
+}
+
+/* others */
+img {
+    background-color: white;
+}
+
+span {
+    background-color: white;
 }
