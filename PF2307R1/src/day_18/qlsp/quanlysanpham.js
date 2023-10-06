@@ -7,7 +7,7 @@ let indexEdit = -1
 function displayAllProduct() {
   let data = "<table>";
   data += "<tr>";
-  data += "<th id='title'>Product Name</th>";
+  data += "<th id='title'> Name</th>Product";
   data += "<th id='title'>Product Price</th>";
   data += "<th id='title'>Product Quantity</th>";
   data += "<th id='title'>Product Image</th>";

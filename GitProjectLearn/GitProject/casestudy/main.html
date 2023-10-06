@@ -13,7 +13,7 @@
     <div id="topBar">
         <table id="navigation">
             <tr>
-                <td class="navigate"><a class="header" href="web.html" target="_self">TRANG CHỦ</a></td>
+                <td class="navigate"><a class="header" href="main.html" target="_self">TRANG CHỦ</a></td>
                 <td class="navigate"><a class="header" href="flashsale.html" target="_blank">FLASH SALE</a></td>
                 <td class="navigate"><a class="header" href="giadung.html" target="_blank">ĐỒ GIA DỤNG</a></td>
                 <td class="navigate"><a class="header" href="thoitrang.html" target="_blank">THỜI TRANG</a></td>
@@ -21,14 +21,18 @@
             </tr>
         </table>
     </div>
+
     <div id="content">
         <h1 id="hot">
             <span><img src="https://png.pngtree.com/png-vector/20190226/ourmid/pngtree-fire-logo-icon-design-template-vector-png-image_705402.jpg" style="width: 30px; height: 30px;"></span>
-            HOT SALE
+            HOT
             <span><img src="https://png.pngtree.com/png-vector/20190226/ourmid/pngtree-fire-logo-icon-design-template-vector-png-image_705402.jpg" style="width: 30px; height: 30px;"></span>
         </h1>
-        <div id="result"></div>
+
+        <div id="productAll"></div>
+        <p style="background-color: white; margin-top: 30px;"><span class="changePage" onclick="previousPage()">Trang trước</span> <span class="changePage" onclick="nextPage()">Trang sau</span></p>
     </div>
+
     <div id="contact">
         <table>
             <tr>
@@ -57,7 +61,7 @@
                     <p>24/7</p>
                 </td>
                 <td style="width: 300px; text-align: center;">
-                    <a href="https://www.facebook.com/vthoa1977"><img id="fb" src="https://scontent.fhan14-2.fna.fbcdn.net/v/t1.15752-9/384530607_896370155254565_5063733397332061613_n.png?_nc_cat=108&ccb=1-7&_nc_sid=ae9488&_nc_ohc=p7hOxiSs9f4AX80yIr8&_nc_ht=scontent.fhan14-2.fna&oh=03_AdRLlw0CQDL-G1joj1Ljt-c8NRYyzzU35r81tOL4_2lV-g&oe=654305F1" alt=""></a> <br>
+                    <a id="fb" href="https://www.facebook.com/vthoa1977"><img id="fb" src="https://scontent.fhan14-2.fna.fbcdn.net/v/t1.15752-9/384530607_896370155254565_5063733397332061613_n.png?_nc_cat=108&ccb=1-7&_nc_sid=ae9488&_nc_ohc=p7hOxiSs9f4AX80yIr8&_nc_ht=scontent.fhan14-2.fna&oh=03_AdRLlw0CQDL-G1joj1Ljt-c8NRYyzzU35r81tOL4_2lV-g&oe=654305F1" alt=""></a> <br>
                 </td>
             </tr>
         </table>
@@ -65,7 +69,7 @@
 </body>
 
 <script src="product.js"></script>
-<script src="web.js"></script>
+<script src="main.js"></script>
 <script>
     function hotSale() {
         let colorHot = document.getElementById("hot")

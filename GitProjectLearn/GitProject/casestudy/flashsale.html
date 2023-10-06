@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flash Sale</title>
+    <title>Shop Hàng Đức</title>
     <link rel="stylesheet" href="web.css" />
     <link rel="icon" href="https://bizweb.dktcdn.net/thumb/large/100/048/662/products/v5-48600638-600c-49d8-88fb-8be70808c5b4.jpg?v=1511276157103">
 </head>
@@ -13,18 +13,74 @@
     <div id="topBar">
         <table id="navigation">
             <tr>
-                <td class="navigate"><a href="web.html" target="_self">TRANG CHỦ</a></td>
-                <td class="navigate"><a href="flashsale.html" target="_blank">FLASH SALE</a></td>
-                <td class="navigate"><a href="giadung.html" target="_blank">ĐỒ GIA DỤNG</a></td>
-                <td class="navigate"><a href="thoitrang.html" target="_blank">THỜI TRANG</a></td>
-                <td class="navigate"><a href="tienich.html" target="_blank">TIỆN ÍCH</a></td>
+                <td class="navigate"><a class="header" href="main.html" target="_self">TRANG CHỦ</a></td>
+                <td class="navigate"><a class="header" href="flashsale.html" target="_blank">FLASH SALE</a></td>
+                <td class="navigate"><a class="header" href="giadung.html" target="_blank">ĐỒ GIA DỤNG</a></td>
+                <td class="navigate"><a class="header" href="thoitrang.html" target="_blank">THỜI TRANG</a></td>
+                <td class="navigate"><a class="header" href="tienich.html" target="_blank">TIỆN ÍCH</a></td>
             </tr>
         </table>
     </div>
-    <div id="result"></div>
+
+    <div id="content">
+        <h1 id="flash">
+            <span><img src="https://thumbs.dreamstime.com/b/lightning-bolt-thunder-lighting-strike-expertise-flat-vector-icon-apps-websites-155180012.jpg" style="width: 30px; height: 30px;"></span>
+            FLASH SALE
+            <span><img src="https://thumbs.dreamstime.com/b/lightning-bolt-thunder-lighting-strike-expertise-flat-vector-icon-apps-websites-155180012.jpg" style="width: 30px; height: 30px;"></span>
+        </h1>
+
+        <div id="productFlashSale"></div>
+        <p style="background-color: white; margin-top: 30px;"><span class="changePage" onclick="previousPage()">Trang trước</span> <span class="changePage" onclick="nextPage()">Trang sau</span></p>
+    </div>
+
+    <div id="contact">
+        <table>
+            <tr>
+                <td style="width: 450px;">
+                    <b style="font-size: 20px;" class="note">Liên hệ</b>
+                    <p>
+                        ĐT: 0123456789 - 0987654321 <br>
+                        Gmail: abcdef123456@gmail.com <br>
+                        Chi nhánh HN: Số nhà 123 Đường ABC, Quận XYZ, Hà Nội. <br>
+                        Chi nhánh HCM: Số 987 Phố IJK, Quận MNP, TP Hồ Chí Minh
+                    </p>
+                </td>
+                <td style="width: 270px; text-align: center;">
+                    <img class="icon" src="https://cdn4.iconfinder.com/data/icons/proglyphs-traveling/512/Delivery-512.png" alt=""> <br>
+                    <p class="note">GIAO HÀNG TẠI NHÀ</p>
+                    <p>Trên toàn quốc</p>
+                </td>
+                <td style="width: 270px; text-align: center;">
+                    <img class="icon" src="https://icons.veryicon.com/png/o/miscellaneous/gcy_icofont/authentication-29.png" alt=""> <br>
+                    <p class="note">CAM KẾT CHÍNH HÃNG</p>
+                    <p>Chất lượng 100%</p>
+                </td>
+                <td style="width: 270px; text-align: center;">
+                    <img class="icon" src="https://icons.veryicon.com/png/o/clothes-accessories/jiufu-wallet-icon-library/phone-icon.png" alt=""> <br>
+                    <p class="note">HỖ TRỢ TƯ VẤN</p>
+                    <p>24/7</p>
+                </td>
+                <td style="width: 300px; text-align: center;">
+                    <a id="fb" href="https://www.facebook.com/vthoa1977"><img id="fb" src="https://scontent.fhan14-2.fna.fbcdn.net/v/t1.15752-9/384530607_896370155254565_5063733397332061613_n.png?_nc_cat=108&ccb=1-7&_nc_sid=ae9488&_nc_ohc=p7hOxiSs9f4AX80yIr8&_nc_ht=scontent.fhan14-2.fna&oh=03_AdRLlw0CQDL-G1joj1Ljt-c8NRYyzzU35r81tOL4_2lV-g&oe=654305F1" alt=""></a> <br>
+                </td>
+            </tr>
+        </table>
+    </div>
 </body>
 
 <script src="product.js"></script>
-<script src="web.js"></script>
+<script src="flashsale.js"></script>
+<script>
+    function hotSale() {
+        let colorHot = document.getElementById("flash")
+        if (colorHot.style.color == "orange") {
+            colorHot.style.color = "black"
+        } else {
+            colorHot.style.color = "orange"
+        }
+    }
+
+    setInterval(hotSale, 400)
+</script>
 
 </html>
